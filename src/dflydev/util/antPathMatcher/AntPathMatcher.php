@@ -59,9 +59,10 @@ class AntPathMatcher implements IAntPathMatcher
         if (($pattern[0] == '/') != ($path[0] == '/')) {
             return false;
         }
-        if ('/' == substr($pattern, '-1')) {
-            $pattern .= '**';
-        }
+        // unknown why
+        //if ('/' == substr($pattern, '-1')) {
+        //    $pattern .= '**';
+        //}
 
         $pattDirs = $this->tokenizeToStringArray($pattern);
         $pathDirs = $this->tokenizeToStringArray($path);
